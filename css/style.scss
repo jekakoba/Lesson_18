@@ -1,0 +1,140 @@
+@import "_fonts.scss";
+@import "_null.scss";
+@import "_ui.scss";
+@import "_burger.scss";
+
+//========== Цвета=========================
+
+$ColorHover: #34c759;
+$black: #252525;
+$background: #1a1a1a;
+$light-grey: #85878c;
+
+//========== Шрифты=========================
+
+$fontMain: "Helveticaneue-Roman";
+$fontHelv-Bold: "Helveticaneue-Bold";
+$fontHelv-Black: "Helveticaneue-Black";
+$fontRoboto: "Roboto";
+
+body {
+	font-family: $fontMain;
+	color: $light-grey;
+	background-color: #85878c;
+}
+
+.logo {
+}
+
+.icon-menu {
+}
+
+.header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+
+	// .header__container
+
+	&__container {
+		min-height: 90px;
+		align-items: center;
+		justify-content: space-between;
+		display: flex;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+		@media (max-width: 991.98px) {
+			min-height: 50px;
+		}
+	}
+
+	// .header__logotype
+
+	&__logotype {
+		padding-right: 20px;
+		position: relative;
+		z-index: 5;
+	}
+
+	// .header__menu
+
+	&__menu {
+	}
+}
+
+.menu {
+	// .menu__body
+
+	&__body {
+		@media (max-width: 767.98px) {
+			position: fixed;
+			top: -100%;
+			left: 0;
+			background-color: $black;
+			width: 100%;
+			height: 100%;
+			padding: 100px 0px 50px 0px;
+			overflow: auto;
+			transition: all 0.5s ease 0s;
+
+			.header:target & {
+				top: 0;
+			}
+		}
+	}
+
+	// .menu__list
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		@media (max-width: 767.98px) {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	// .menu__item
+
+	&__item {
+		padding: 5px 0px;
+		&:not(:last-child) {
+			margin: 0px 45px 0px 0px;
+		}
+		@media (max-width: 991.98px) {
+			&:not(:last-child) {
+				margin: 0px 20px 0px 0px;
+			}
+		}
+		@media (max-width: 767.98px) {
+			&:not(:last-child) {
+				margin-right: 0px;
+				margin-bottom: 25px;
+			}
+
+			&:last-child {
+				margin: 0px;
+			}
+		}
+	}
+
+	// .menu__link
+	&__link {
+		font-family: $fontHelv-Black sans-serif;
+		color: white;
+		font-size: 14px;
+		line-height: 1.5;
+		font-weight: 700;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			color: $ColorHover;
+		}
+
+		@media (max-width: 767.98px) {
+			font-size: 30px;
+		}
+	}
+}

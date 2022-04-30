@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:700&display=swap);
+
+@font-face {
+	font-family: "Helveticaneue-Roman";
+	src: url("../fonts/helveticaneue-roman.woff2") format("woff2"),
+		url("../fonts/helveticaneue-roman.woff") format("woff");
+
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Helveticaneue-Bold";
+	src: url("../fonts/Helvetica-Neue-Condensed-Bold.woff2") format("woff2"),
+		url("../fonts/Helvetica-Neue-Condensed-Bold.woff") format("woff");
+
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Helveticaneue-Black";
+	src: url("../fonts/Helvetica-Neue-Condensed-Black.woff2") format("woff2"),
+		url("../fonts/Helvetica-Neue-Condensed-Black.woff") format("woff");
+
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+}
