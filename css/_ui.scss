@@ -11,7 +11,19 @@
 	margin: 0 auto;
 }
 
-%ibg {
+.btn {
+	display: inline-flex;
+	padding: 25px 58px;
+	font-size: 18px;
+	color: #1a1a1a;
+	font-weight: 700;
+	align-items: center;
+	justify-content: center;
+	background: #34c759;
+	border-radius: 43px;
+}
+
+._ibg {
 	position: relative;
 	img {
 		position: absolute;
@@ -21,6 +33,15 @@
 		left: 0;
 		object-fit: cover;
 	}
+}
+
+.title {
+	color: #303030;
+	font-size: 90px;
+	font-weight: 900;
+	line-height: 1.5;
+	text-transform: uppercase;
+	letter-spacing: 4px;
 }
 
 .page {
