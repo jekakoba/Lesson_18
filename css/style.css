@@ -123,6 +123,7 @@ html {
 }
 
 .title {
+  text-align: center;
   color: #303030;
   font-size: 90px;
   font-weight: 900;
@@ -331,7 +332,8 @@ body {
 }
 
 .menu__link {
-  font-family: "Helveticaneue-Black" sans-serif;
+  position: relative;
+  font-family: "Helveticaneue-Black";
   color: white;
   font-size: 14px;
   line-height: 1.5;
@@ -341,8 +343,27 @@ body {
   transition: all 0.3s ease 0s;
 }
 
+.menu__link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 0px;
+  height: 0px;
+  margin-bottom: -10px;
+  background-color: #34c759;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
 .menu__link:hover {
   color: #34c759;
+}
+
+.menu__link:hover::after {
+  width: 70%;
+  height: 3px;
 }
 
 @media (max-width: 767.98px) {
@@ -462,9 +483,11 @@ body {
   transition: all 0.4s ease 0s;
 }
 
-.preview__btn:hover {
-  background-color: #0aa92f;
-  color: white;
+@media (any-hover: hover) {
+  .preview__btn:hover {
+    background-color: #0aa92f;
+    color: white;
+  }
 }
 
 .preview__picture {
@@ -588,9 +611,11 @@ body {
   margin: 0px 0px 5px 0px;
 }
 
-.contacts__lable:hover {
-  cursor: pointer;
-  color: #34c759;
+@media (any-hover: hover) {
+  .contacts__lable:hover {
+    cursor: pointer;
+    color: #34c759;
+  }
 }
 
 .contacts__text {
@@ -606,11 +631,11 @@ body {
 
 @media (max-width: 991.98px) {
   .work {
-    padding: 20px 0px 20px 0px;
+    padding: 10px 0px 10px 0px;
   }
 }
 
-.work .heading {
+.work .heading__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -622,7 +647,7 @@ body {
           justify-content: center;
 }
 
-.work .heading::after {
+.work .heading__title::after {
   content: "";
   position: absolute;
   display: block;
@@ -634,7 +659,7 @@ body {
 }
 
 @media (max-width: 991.98px) {
-  .work .heading::after {
+  .work .heading__title::after {
     margin-bottom: 2px;
   }
 }
@@ -669,6 +694,12 @@ body {
   letter-spacing: 0.3em;
 }
 
+@media (max-width: 479.98px) {
+  .work__header::before {
+    font-size: 23px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .work__header:not(:last-child) {
     margin: 0px 0px 60px 0px;
@@ -678,6 +709,12 @@ body {
 @media (max-width: 767.98px) {
   .work__header:not(:last-child) {
     margin: 0px 0px 30px 0px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .work .heading__title.title {
+    font-size: 60px;
   }
 }
 
@@ -791,4 +828,298 @@ body {
   font-size: 13px;
   line-height: 1.5;
   letter-spacing: -0.1625px;
+}
+
+.dishes {
+  padding: 60px 0px 60px 0px;
+}
+
+@media (max-width: 991.98px) {
+  .dishes {
+    padding: 10px 0px 10px 0px;
+  }
+}
+
+.dishes__header {
+  position: relative;
+}
+
+.dishes__header:not(:last-child) {
+  margin: 0px 0px 90px 0px;
+}
+
+.dishes__header::before {
+  content: "Dish Of The Day";
+  position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(0%, 33%);
+      -ms-transform: translate(0%, 33%);
+          transform: translate(0%, 33%);
+  text-transform: capitalize;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.3;
+  color: #d9d9d9;
+  letter-spacing: 0.2em;
+}
+
+@media (max-width: 479.98px) {
+  .dishes__header::before {
+    font-size: 20px;
+  }
+}
+
+.dishes__header .heading__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dishes__header .heading__title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  margin-bottom: -28px;
+  background-color: #34c759;
+}
+
+@media (max-width: 991.98px) {
+  .dishes__header .heading__title::after {
+    margin-bottom: 2px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .dishes__header:not(:last-child) {
+    margin: 0px 0px 60px 0px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .dishes__header:not(:last-child) {
+    margin: 0px 0px 30px 0px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .dishes .heading__title.title {
+    font-size: 60px;
+  }
+}
+
+.dishes__rows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -15px;
+  row-gap: 30px;
+}
+
+.dishes__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+  padding: 0 15px;
+  min-width: 290px;
+}
+
+@media (max-width: 991.98px) {
+  .dishes__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+}
+
+@media (max-width: 640px) {
+  .dishes__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+}
+
+.card-dishes {
+  position: relative;
+  background: #252525;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 6px;
+  height: 100%;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+@media (any-hover: hover) {
+  .card-dishes:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+.card-dishes__image {
+  padding: 0px 0px 74.28571428571429% 0px;
+}
+
+.card-dishes__link {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 4%;
+  left: 83%;
+  background: url(../img/menu/share.svg) 0 0 no-repeat;
+}
+
+.card-dishes__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+}
+
+@media (max-width: 991.98px) {
+  .card-dishes__body {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .card-dishes__body {
+    padding: 15px;
+  }
+}
+
+.card-dishes__title {
+  color: #d9d9d9;
+  font-size: 32px;
+  line-height: 1.1;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.card-dishes__title:not(:last-child) {
+  margin: 0px 0px 10px 0px;
+}
+
+@media (any-hover: hover) {
+  .card-dishes__title:hover {
+    color: #34c759;
+  }
+}
+
+.card-dishes__lable {
+  color: #a4a8b2;
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+.card-dishes__lable:not(:last-child) {
+  margin: 0px 0px 25px 0px;
+}
+
+.card-dishes__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  color: #85878c;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.card-dishes__text:not(:last-child) {
+  margin: 0px 0px 25px 0px;
+}
+
+.card-dishes__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-dishes__stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.card-dishes .stars-item {
+  background: url(../img/star.svg) 0 0 no-repeat;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.card-dishes .stars-item:not(:last-child) {
+  margin-right: 7px;
+}
+
+.card-dishes__button {
+  font-family: "Helveticaneue-Bold";
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1.5;
+  background-color: #262626;
+  border: 2px solid #303030;
+  border-radius: 30px;
+  color: #85878c;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 16px 28px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+@media (any-hover: hover) {
+  .card-dishes__button:hover {
+    background-color: #34c759;
+    color: black;
+    border: 3px solid #34c759;
+  }
 }
