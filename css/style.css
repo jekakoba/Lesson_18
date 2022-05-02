@@ -941,7 +941,7 @@ body {
   min-width: 290px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1000px) {
   .dishes__column {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 50%;
@@ -1067,6 +1067,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 15px;
 }
 
 .card-dishes__stars {
@@ -1076,7 +1079,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 20px;
+  padding-right: 10px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -1094,6 +1097,10 @@ body {
 }
 
 .card-dishes__button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  text-align: center;
   font-family: "Helveticaneue-Bold";
   font-size: 10px;
   font-weight: 900;
