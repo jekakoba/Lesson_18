@@ -1120,6 +1120,6 @@ body {
   .card-dishes__button:hover {
     background-color: #34c759;
     color: black;
-    border: 3px solid #34c759;
+    border: 2px solid #34c759;
   }
 }
