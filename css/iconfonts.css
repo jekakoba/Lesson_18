@@ -2,8 +2,7 @@
 	font-family: 'icomoon';
 	src:
 		url('../fonts/icomoon.woff2') format('woff2'),
-		url('../fonts/icomoon.woff') format('woff'),
-		url('../fonts/icomoon.svg') format('svg');
+		url('../fonts/icomoon.woff') format('woff');
 
 	font-weight: normal;
 	font-style: normal;
@@ -26,7 +25,45 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-._icon-user:before {
+._icon-arrow:before {
 	content: "\e900";
-	color: #424551;
+	position: relative;
+	transform: translate(190%, -30%);
+	font-size: 30px;
+	transition: all 0.5s ease 0s;
+
+
+}
+
+._icon-arrow:hover {
+	color: white;
+}
+
+._icon-comments:before {
+	content: "\e901";
+	padding-right: 15px;
+	font-size: 15px;
+
+}
+
+@media (max-width:479.98px) {
+	._icon-comments:before {
+		padding-right: 7px;
+		font-size: 12px;
+	}
+}
+
+
+._icon-views:before {
+	content: "\e902";
+	padding-right: 15px;
+	font-size: 15px;
+
+}
+
+@media (max-width:479.98px) {
+	._icon-views:before {
+		padding-right: 7px;
+		font-size: 12px;
+	}
 }

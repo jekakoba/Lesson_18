@@ -48,10 +48,20 @@
 .reviews {
 	font-weight: 700;
 	column-gap: 30px;
-	font-size: 12px;
+	font-size: 15px;
 	color: white;
 	line-height: 2;
 	display: flex;
+
+	@media (max-width: 479.98px) {
+		column-gap: 10px;
+	}
+
+	&__views {
+	}
+
+	&__comments {
+	}
 }
 
 .recipes__text {
@@ -70,6 +80,10 @@
 	text-transform: uppercase;
 	color: #ffffff;
 	background-color: rgba(0, 0, 0, 0.3);
+	transition: all 0.5s ease 0s;
+	@media (max-width: 479.98px) {
+		padding: 5px 7px;
+	}
 }
 
 .date-recipes {
