@@ -259,12 +259,18 @@ body {
 	// .preview__button
 
 	&__button {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
 	}
 
 	// .preview__btn
 
 	&__btn {
 		transition: all 0.4s ease 0s;
+
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: #0aa92f;
@@ -747,7 +753,7 @@ body {
 	&__bottom {
 		display: flex;
 		flex-wrap: wrap;
-		row-gap: 15px;
+		gap: 15px;
 	}
 
 	// .card-dishes__stars
@@ -771,7 +777,7 @@ body {
 	// .card-dishes__button
 
 	&__button {
-		flex: 1 1 auto;
+		flex-wrap: wrap;
 		text-align: center;
 		font-family: $fontHelv-Bold;
 		font-size: 10px;
@@ -1009,6 +1015,7 @@ body {
 			position: relative;
 			z-index: 2;
 			flex: 0 0 50%;
+			flex-wrap: wrap;
 			justify-content: center;
 		}
 
@@ -1111,7 +1118,9 @@ body {
 
 		&__info {
 			display: inline-flex;
+			flex: 0 0 37%;
 			align-items: center;
+			flex-wrap: wrap;
 			gap: 15px;
 
 			@media (max-width: 479.98px) {
@@ -1134,6 +1143,67 @@ body {
 			flex-wrap: wrap;
 			justify-content: end;
 			align-items: center;
+		}
+	}
+}
+
+.footer {
+	background-color: #252525;
+	// padding: 30px 0;
+	// .footer__container
+
+	&__container {
+	}
+
+	// .footer__top
+
+	&__top {
+		padding: 30px 0;
+		&:not(:last-child) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	// .footer__bottom
+
+	&__bottom {
+		padding: 30px 10px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #303030;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	// .footer__logo
+
+	&__logo {
+		&:not(:last-child) {
+			margin: 0px 0px 13px 0px;
+		}
+	}
+
+	// .footer__copiright
+
+	&__copiright {
+		color: #737373;
+		font-size: 12px;
+		line-height: 1.8;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $ColorHover;
+			}
 		}
 	}
 }
