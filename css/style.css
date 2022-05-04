@@ -1188,6 +1188,12 @@ body {
   }
 }
 
+@media (max-width: 479.98px) {
+  .card-dishes__button {
+    padding: 7px 15px;
+  }
+}
+
 .recipes {
   padding: 60px 0px 60px 0px;
 }

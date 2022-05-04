@@ -800,6 +800,10 @@ body {
 				border: 2px solid $ColorHover;
 			}
 		}
+
+		@media (max-width: 479.98px) {
+			padding: 7px 15px;
+		}
 	}
 }
 
